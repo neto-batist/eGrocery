@@ -1,4 +1,4 @@
-# 🛒 Flutter Grocery App Template  
+# 🛒 Flutter Grocery App 
 
 ![Preview](/gif.gif)  
 
