@@ -134,3 +134,21 @@ Antes de começar, certifique-se de ter instalado:
 git clone https://github.com/seu-usuario/eGrocery.git
 cd eGrocery
 flutter pub get
+```
+
+---
+
+## 🗂️ Organização do Projeto
+### Para acompanhar o progresso do desenvolvimento, tarefas e estrutura de funcionalidades, acesse o quadro do Trello:
+
+🔗 [Acesse o Trello do Projeto](https://trello.com/invite/b/67fe7bfbdcd9d399e88e4a06/ATTI3acbec4657954482677b2710a33b4563A21F8B8E/damhttps://trello.com/invite/b/67fe7bfbdcd9d399e88e4a06/ATTI3acbec4657954482677b2710a33b4563A21F8B8E/dam)
+
+🔹Lá você encontra:
+
+🔹Tarefas concluídas e pendentes
+
+🔹Etapas de desenvolvimento por sprint
+
+🔹Organização por módulos e funcionalidades
+
+🔹Colaboração entre os membros da equipe
