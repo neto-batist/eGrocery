@@ -152,3 +152,13 @@ flutter pub get
 🔹Organização por módulos e funcionalidades
 
 🔹Colaboração entre os membros da equipe
+
+---
+
+
+## O aplicativo eGrocery consome dados de uma API REST desenvolvida especialmente para esse projeto.
+### Nela estão os produtos, promoções e dados necessários para o funcionamento do app.
+
+📡 Repositório da API:
+
+👉 https://github.com/neto-batist/eGrocery_back
