@@ -88,36 +88,37 @@ O *eGrocery* proporciona uma *experiência fluida e moderna, com um design **lim
 
 ---
 
-## 💻 *Tecnologias Utilizadas*  
-🔹 Flutter - Framework principal
+## 💻 Tecnologias Utilizadas
 
-🔹 Dart - Linguagem de programação
+🔹 **Flutter** - Framework principal para construção da interface e lógica da aplicação mobile  
+🔹 **Dart** - Linguagem de programação utilizada com Flutter  
+🔹 **Dio** - Cliente HTTP utilizado para comunicação com APIs REST  
+🔹 **GetIt** - Gerenciador de injeção de dependências  
+🔹 **Equatable** - Facilita a comparação de objetos, útil especialmente com BLoC  
+🔹 **Bloc (flutter_bloc)** - Gerenciamento de estado baseado em eventos e estados  
+🔹 **JsonSerializable** - Geração automática de código para serialização JSON  
+🔹 **Hive** - Armazenamento local leve e rápido  
+🔹 **Path Provider** - Permite acessar diretórios locais em dispositivos  
+🔹 **Freezed** - Geração automática de classes imutáveis e union types  
+🔹 **Build Runner** - Ferramenta para geração de código com base em anotações  
+🔹 **Google Fonts** - Utilização de fontes do Google na UI  
+🔹 **Flutter SVG** - Renderização de arquivos SVG  
+🔹 **Lottie** - Animações baseadas em arquivos JSON
 
-🔹 Dio - Cliente HTTP para requisições REST
+---
 
-🔹 flutter_svg - Suporte a imagens SVG
+## 🧩 Padrões de Projeto Utilizados
 
-🔹 Firebase - Autenticação e banco de dados
+🔸 **Repository Pattern** - Separa a lógica de negócios da lógica de acesso a dados, facilitando testes e manutenção  
+🔸 **Data Source Pattern** - Organiza a camada de dados em fontes remota e local  
+🔸 **Dependency Injection (com GetIt)** - Torna as dependências desacopladas e de fácil substituição  
+🔸 **Clean Architecture** - Estrutura o projeto em camadas: Domain, Data e Presentation, aumentando a escalabilidade e manutenibilidade  
+🔸 **DTO (Data Transfer Object)** - Facilita o transporte de dados entre camadas e serialização  
+🔸 **State Management com BLoC** - Gerencia os estados de forma previsível e baseada em eventos  
+🔸 **Service Locator** - Implementação de injeção de dependência via GetIt  
+🔸 **Use Cases (Casos de Uso)** - Representam as regras de negócio de forma isolada da camada de apresentação
 
-🔹 Provider - Gerenciamento de estado
 
-🔹 Google Maps API - Localização e entrega
-
-🔹 Stripe/Paypal - Pagamento online
-
-🔹 Organização em camadas (Data, Domain, View) - Arquitetura limpa
-
-🔹 BottomNavigationBar - Navegação inferior entre telas
-
-🔹 Image.asset / Image.network - Carregamento de imagens locais e remotas
-
-🔹 ListView.builder - Exibição dinâmica de listas
-
-🔹 StatefulWidget - Controle de estado interno da tela
-
-🔹 Rotas nomeadas - Navegação entre telas definidas via constantes
-
-🔹 Assets locais - Utilização de imagens estáticas no app
 
 ---
 
