@@ -17,33 +17,51 @@ O *eGrocery* é um aplicativo de compras online voltado para mercados de bairro 
 
 ## 🎯 *Objetivo do Aplicativo*  
 Facilitar o processo de compra de produtos de mercado, permitindo que os usuários:
+
 ✅ Naveguem por categorias de produtos
+
 ✅ Adicionem itens ao carrinho
+
 ✅ Finalizem pedidos com diferentes opções de pagamento e entrega
+
 
 Além disso, o app serve como uma ferramenta para que o mercado entenda melhor os comportamentos e preferências de seus consumidores, sem depender de plataformas intermediárias como o iFood. 
 
 ---
 
 ## 👥 *Perfil do Usuário*  
-🔹 Clientes finais, que desejam:
-    🔹Evitar deslocamentos e filas
-    🔹Reabastecer sua casa de forma prática
-    🔹Comprar produtos diretamente do seu mercado local
-🔹 Administrador do mercado, que:
-    🔹Informa aos desenvolvedores os produtos disponíveis e promoções atuais
-    🔹Não interage diretamente com o app, mas fornece os dados que serão inseridos na API consumida pelo aplicativo
-    🔹Utiliza as informações geradas pelo uso do app para conhecer melhor seus clientes  
+#🔹 Clientes finais, que desejam:
+
+   🔹Evitar deslocamentos e filas
+    
+   🔹Reabastecer sua casa de forma prática
+    
+   🔹Comprar produtos diretamente do seu mercado local
+    
+#🔹 Administrador do mercado, que:
+
+   🔹Informa aos desenvolvedores os produtos disponíveis e promoções atuais
+    
+   🔹Não interage diretamente com o app, mas fornece os dados que serão inseridos na API consumida pelo aplicativo
+    
+   🔹Utiliza as informações geradas pelo uso do app para conhecer melhor seus clientes  
+    
 ---
 
 ## 🚀 *Funcionalidades Principais*  
 
 ✔ Cadastro e login de usuários (com suporte a e-mail, telefone e redes sociais)
+
 ✔ Catálogo de produtos organizado por categorias (com fotos, descrições e preços)
+
 ✔ Carrinho de compras e gerenciamento de pedidos (adicionar/remover itens, aplicar cupons)
+
 ✔ Pagamento online (cartão de crédito, débito e carteiras digitais)
+
 ✔ Rastreamento de pedidos e notificações sobre o status da entrega
+
 ✔ Lista de favoritos para facilitar compras futuras
+
 ✔ Histórico de pedidos para reabastecimento rápido 
 
 O *eGrocery* proporciona uma *experiência fluida e moderna, com um design **limpo e intuitivo, permitindo que qualquer usuário **navegue facilmente pelo app e realize suas compras com poucos toques.*  
@@ -55,12 +73,17 @@ O *eGrocery* proporciona uma *experiência fluida e moderna, com um design **lim
 📌 *Equipe do Projeto:*  
 
 👨‍💻 Felipe Mendes - 📩 felipe.mendess@ufape.edu.br
+
 👨‍💻 Neto Batista - 📩 netobatista090@gmail.com
+
 👨‍💻 Pedro William - 📩 pedrowilliam014@hotmail.com
 
 📂 Conteúdo da Primeira Entrega
+
 📄 📑 Documentação → Disponível na pasta "Documentação do Projeto".
+
 🎥 📽️ Fluxo de Telas → Explicado no vídeo da primeira parte.
+
 📸 🖼️ Prints de Referência → Localizados logo abaixo do vídeo. 
 
 ---
