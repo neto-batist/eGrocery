@@ -39,6 +39,10 @@ dependencies:
   form_field_validator: ^1.1.0
   animations: ^2.0.11
   flutter_credit_card: ^3.0.3
+  dio: ^5.4.0
+  flutter_riverpod: ^2.5.1
+  get_it: ^7.6.4
+  json_annotation: ^4.8.1
 
 dev_dependencies:
   flutter_test:

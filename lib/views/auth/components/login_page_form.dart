@@ -27,6 +27,7 @@ class _LoginPageFormState extends State<LoginPageForm> {
 
   onLogin() {
     final bool isFormOkay = _key.currentState?.validate() ?? false;
+    //realizar chamada na API para garantir que é uma conta válida
     if (isFormOkay) {
       Navigator.pushNamed(context, AppRoutes.entryPoint);
     }
@@ -46,11 +47,11 @@ class _LoginPageFormState extends State<LoginPageForm> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Phone Field
-              const Text("Phone Number"),
+              const Text("Email"),
               const SizedBox(height: 8),
               TextFormField(
                 keyboardType: TextInputType.number,
-                validator: Validators.requiredWithFieldName('Phone').call,
+                validator: Validators.email.call,
                 textInputAction: TextInputAction.next,
               ),
               const SizedBox(height: AppDefaults.padding),
