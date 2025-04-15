@@ -67,19 +67,33 @@ O *eGrocery* proporciona uma *experiência fluida e moderna, com um design **lim
 
 ## 💻 *Tecnologias Utilizadas*  
 🔹 Flutter - Framework principal
+
 🔹 Dart - Linguagem de programação
+
 🔹 Dio - Cliente HTTP para requisições REST
+
 🔹 flutter_svg - Suporte a imagens SVG
+
 🔹 Firebase - Autenticação e banco de dados
+
 🔹 Provider - Gerenciamento de estado
+
 🔹 Google Maps API - Localização e entrega
+
 🔹 Stripe/Paypal - Pagamento online
+
 🔹 Organização em camadas (Data, Domain, View) - Arquitetura limpa
+
 🔹 BottomNavigationBar - Navegação inferior entre telas
+
 🔹 Image.asset / Image.network - Carregamento de imagens locais e remotas
+
 🔹 ListView.builder - Exibição dinâmica de listas
+
 🔹 StatefulWidget - Controle de estado interno da tela
+
 🔹 Rotas nomeadas - Navegação entre telas definidas via constantes
+
 🔹 Assets locais - Utilização de imagens estáticas no app
 
 ---
