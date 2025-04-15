@@ -11,37 +11,40 @@
 ---
 
 ## 📌 *Descrição do Aplicativo eGrocery*  
-O *eGrocery* é um aplicativo de compras online focado em produtos de mercearia, permitindo que usuários adquiram alimentos frescos, pacotes personalizados e ofertas especiais de forma prática e rápida.  
+O *eGrocery* é um aplicativo de compras online voltado para mercados de bairro e pequenas lojas, com o objetivo de conectar diretamente o estabelecimento aos seus clientes. Ele permite que os consumidores realizem pedidos de produtos de supermercado de forma prática e rápida, enquanto o mercado obtém uma visão mais clara sobre os hábitos de compra de seus clientes.  
 
 ---
 
 ## 🎯 *Objetivo do Aplicativo*  
-Facilitar o processo de *compra de mantimentos*, permitindo que os usuários:  
-✅ Naveguem por categorias de produtos  
-✅ Adicionem itens ao carrinho  
-✅ Personalizem pacotes de compras  
-✅ Finalizem pedidos com diferentes opções de pagamento e entrega  
+Facilitar o processo de compra de produtos de mercado, permitindo que os usuários:
+✅ Naveguem por categorias de produtos
+✅ Adicionem itens ao carrinho
+✅ Finalizem pedidos com diferentes opções de pagamento e entrega
+
+Além disso, o app serve como uma ferramenta para que o mercado entenda melhor os comportamentos e preferências de seus consumidores, sem depender de plataformas intermediárias como o iFood. 
 
 ---
 
 ## 👥 *Perfil do Usuário*  
-O *eGrocery* é voltado para consumidores que buscam *praticidade e rapidez* na compra de alimentos, incluindo:  
-🔹 *Pessoas que querem evitar filas* e compras presenciais em supermercados.  
-🔹 *Famílias que fazem compras recorrentes* e precisam de uma solução eficiente para reabastecer sua despensa.  
-🔹 *Usuários que desejam pacotes personalizados* de frutas, vegetais e produtos frescos.  
-
+🔹 Clientes finais, que desejam:
+    🔹Evitar deslocamentos e filas
+    🔹Reabastecer sua casa de forma prática
+    🔹Comprar produtos diretamente do seu mercado local
+🔹 Administrador do mercado, que:
+    🔹Informa aos desenvolvedores os produtos disponíveis e promoções atuais
+    🔹Não interage diretamente com o app, mas fornece os dados que serão inseridos na API consumida pelo aplicativo
+    🔹Utiliza as informações geradas pelo uso do app para conhecer melhor seus clientes  
 ---
 
 ## 🚀 *Funcionalidades Principais*  
 
-✔ *Cadastro e login de usuários* (com suporte a login via e-mail, telefone e redes sociais).  
-✔ *Catálogo de produtos organizado por categorias* (com fotos, descrições e preços).  
-✔ *Criação de pacotes personalizados de compras* (selecionando itens específicos).  
-✔ *Carrinho de compras e gerenciamento de pedidos* (adicionar/remover itens, aplicar cupons de desconto).  
-✔ *Pagamento online* (cartão de crédito, débito e carteiras digitais).  
-✔ *Rastreamento de pedidos e notificações* sobre o status da entrega.  
-✔ *Lista de favoritos* para salvar produtos e facilitar compras futuras.  
-✔ *Histórico de pedidos* para fácil reabastecimento de produtos frequentes.  
+✔ Cadastro e login de usuários (com suporte a e-mail, telefone e redes sociais)
+✔ Catálogo de produtos organizado por categorias (com fotos, descrições e preços)
+✔ Carrinho de compras e gerenciamento de pedidos (adicionar/remover itens, aplicar cupons)
+✔ Pagamento online (cartão de crédito, débito e carteiras digitais)
+✔ Rastreamento de pedidos e notificações sobre o status da entrega
+✔ Lista de favoritos para facilitar compras futuras
+✔ Histórico de pedidos para reabastecimento rápido 
 
 O *eGrocery* proporciona uma *experiência fluida e moderna, com um design **limpo e intuitivo, permitindo que qualquer usuário **navegue facilmente pelo app e realize suas compras com poucos toques.*  
 
@@ -50,25 +53,34 @@ O *eGrocery* proporciona uma *experiência fluida e moderna, com um design **lim
 ## 📌 *Primeira Entrega do Projeto*  
 
 📌 *Equipe do Projeto:*  
-👨‍💻 *Pedro William* - 📩 pedrowilliam014@hotmail.com  
-👨‍💻 *Felipe Mendes* - 📩 felipe.mendess@ufape.edu.br  
-👨‍💻 *Neto Batista* - 📩 netobatista090@gmail.com  
 
-### 📂 *Conteúdo da Primeira Entrega*  
+👨‍💻 Felipe Mendes - 📩 felipe.mendess@ufape.edu.br
+👨‍💻 Neto Batista - 📩 netobatista090@gmail.com
+👨‍💻 Pedro William - 📩 pedrowilliam014@hotmail.com
 
-📄 *📑 Documentação* → Disponível na pasta *"Documentação do Projeto"*.  
-🎥 *📽️ Fluxo de Telas* → Explicado no *vídeo da primeira parte*.  
-📸 *🖼️ Prints de Referência* → Localizados *logo abaixo do vídeo*.  
+📂 Conteúdo da Primeira Entrega
+📄 📑 Documentação → Disponível na pasta "Documentação do Projeto".
+🎥 📽️ Fluxo de Telas → Explicado no vídeo da primeira parte.
+📸 🖼️ Prints de Referência → Localizados logo abaixo do vídeo. 
 
 ---
 
 ## 💻 *Tecnologias Utilizadas*  
-🔹 *Flutter* - Framework principal  
-🔹 *Dart* - Linguagem de programação  
-🔹 *Firebase* - Autenticação e banco de dados  
-🔹 *Provider* - Gerenciamento de estado  
-🔹 *Google Maps API* - Localização e entrega  
-🔹 *Stripe/Paypal* - Pagamento online  
+🔹 Flutter - Framework principal
+🔹 Dart - Linguagem de programação
+🔹 Dio - Cliente HTTP para requisições REST
+🔹 flutter_svg - Suporte a imagens SVG
+🔹 Firebase - Autenticação e banco de dados
+🔹 Provider - Gerenciamento de estado
+🔹 Google Maps API - Localização e entrega
+🔹 Stripe/Paypal - Pagamento online
+🔹 Organização em camadas (Data, Domain, View) - Arquitetura limpa
+🔹 BottomNavigationBar - Navegação inferior entre telas
+🔹 Image.asset / Image.network - Carregamento de imagens locais e remotas
+🔹 ListView.builder - Exibição dinâmica de listas
+🔹 StatefulWidget - Controle de estado interno da tela
+🔹 Rotas nomeadas - Navegação entre telas definidas via constantes
+🔹 Assets locais - Utilização de imagens estáticas no app
 
 ---
 
