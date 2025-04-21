@@ -14,7 +14,7 @@ class ProductRemoteDatasourceImpl implements ProductRemoteDatasource {
       final response = await _dio.get('/products');
 
       if (response.statusCode == 200) {
-        final List data = response.data['content']; // <- Aqui está a correção
+        final List data = response.data['content'];
         return data.map((json) => ProductModel.fromJson(json)).toList();
       } else {
         throw Exception('Erro ao buscar produtos: ${response.statusCode}');
@@ -28,10 +28,27 @@ class ProductRemoteDatasourceImpl implements ProductRemoteDatasource {
   Future<List<Product>> fetchProducts() async {
     try {
       final productModels = await getProducts();
-
       return productModels.map((model) => model.toEntity()).toList();
     } catch (e) {
       throw Exception('Erro ao buscar entidades de produtos: $e');
+    }
+  }
+
+  @override
+  Future<List<Product>> fetchProductsByCategory(int categoryId) async {
+    try {
+      final response = await _dio.get('/products', queryParameters: {
+        'categoryId': categoryId,
+      });
+
+      if (response.statusCode == 200) {
+        final List data = response.data['content'];
+        return data.map((json) => ProductModel.fromJson(json).toEntity()).toList();
+      } else {
+        throw Exception('Erro ao buscar produtos da categoria: ${response.statusCode}');
+      }
+    } catch (e) {
+      throw Exception('Erro ao buscar produtos da categoria: $e');
     }
   }
 }

@@ -11,4 +11,7 @@ class ProductRepositoryImpl implements ProductRepository {
   Future<List<Product>> getProducts() {
     return remoteDatasource.fetchProducts();
   }
+  Future<List<Product>> getProductsByCategory(int categoryId) {
+    return remoteDatasource.fetchProductsByCategory(categoryId);
+  }
 }
