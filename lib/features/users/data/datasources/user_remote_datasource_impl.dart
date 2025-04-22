@@ -12,7 +12,7 @@ class UserRemoteDatasourceImpl implements UserRemoteDatasource {
   Future<List<UserModel>> getUsers() async {
     try {
       final response = await dioClient.get('/users');
-      final List data = response.data;
+      final List data = response.data['content'];
       return data.map((json) => UserModel.fromJson(json)).toList();
     } on DioException catch (e) {
       throw Exception('Erro ao buscar usuários: ${e.message}');
@@ -47,12 +47,17 @@ class UserRemoteDatasourceImpl implements UserRemoteDatasource {
   }
 
   @override
-  Future<void> createUser(UserModel user) async {
+  Future<UserModel> createUser(UserModel user) async {
     try {
-      await dioClient.post(
-        '/users',
+    final response = await dioClient.post(
+        '/users/create',
         data: user.toJson(),
       );
+    if (response.statusCode == 200){
+      return UserModel.fromJson(response.data);
+    } else {
+      throw Exception('Erro ao criar usuário');
+    }
     } on DioException catch (e) {
       throw Exception('Erro ao criar usuário: ${e.message}');
     }
@@ -62,7 +67,7 @@ class UserRemoteDatasourceImpl implements UserRemoteDatasource {
   Future<void> updateUser(UserModel user) async {
     try {
       await dioClient.put(
-        '/users/${user.id}',
+        '/users/update/${user.id}',
         data: user.toJson(),
       );
     } on DioException catch (e) {
@@ -73,7 +78,7 @@ class UserRemoteDatasourceImpl implements UserRemoteDatasource {
   @override
   Future<void> deleteUser(int id) async {
     try {
-      await dioClient.delete('/users/$id');
+      await dioClient.delete('/users/delete/$id');
     } on DioException catch (e) {
       throw Exception('Erro ao deletar usuário: ${e.message}');
     }
