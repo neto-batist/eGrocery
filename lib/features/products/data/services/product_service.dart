@@ -1,10 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:grocery/features/products/data/models/product_model.dart';
-import 'package:grocery/features/products/domain/entities/product.dart';
-import '../../../../core/network/dio_client.dart';
-import '../../../../core/error/exceptions.dart';
-
-import 'package:dio/dio.dart';
 
 class ProductService {
   final Dio dioClient;

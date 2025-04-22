@@ -36,7 +36,11 @@ class UserRemoteDatasourceImpl implements UserRemoteDatasource {
         '/users/login',
         data: user.toJson(),
       );
-      return UserModel.fromJson(response.data);
+      if (response.statusCode == 200){
+        return UserModel.fromJson(response.data);
+      } else {
+        throw Exception('Erro ao fazer login');
+      }
     } on DioException catch (e) {
       throw Exception('Erro ao fazer login: ${e.message}');
     }
