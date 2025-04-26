@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import 'core/routes/app_routes.dart';
 import 'core/routes/on_generate_route.dart';
 import 'core/themes/app_themes.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'features/products/presentation/views/product_list_page.dart';
+import 'features/users/presentation/providers/user_provider.dart';
 
 void main() {
   runApp(

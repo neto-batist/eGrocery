@@ -5,9 +5,9 @@ import '../../../core/constants/constants.dart';
 import '../../../core/routes/app_routes.dart';
 
 class SignUpButton extends StatelessWidget {
-  const SignUpButton({
-    super.key,
-  });
+  final VoidCallback onPressed;
+
+  const SignUpButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +18,12 @@ class SignUpButton extends StatelessWidget {
           Text(
             'Sign Up',
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+              fontWeight: FontWeight.bold,
+            ),
           ),
           const Spacer(),
           ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, AppRoutes.numberVerification);
-            },
+            onPressed: onPressed,
             style: ElevatedButton.styleFrom(elevation: 1),
             child: SvgPicture.asset(
               AppIcons.arrowForward,

@@ -1,17 +1,6 @@
-import 'package:dio/src/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:grocery/core/network/dio_client.dart';
 import 'package:grocery/features/products/data/services/product_service.dart';
 import 'package:grocery/features/products/domain/entities/product.dart';
-import '../../core/constants/app_icons.dart';
-
-import '../../core/constants/app_defaults.dart';
-import '../../core/routes/app_routes.dart';
-import 'components/ad_space.dart';
-import 'components/our_new_item.dart';
-import 'components/popular_packs.dart';
-
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -25,7 +14,6 @@ class _HomePageState extends State<HomePage> {
   List<Product> products = [];
   bool loading = true;
 
-
   @override
   void initState() {
     super.initState();
@@ -36,10 +24,9 @@ class _HomePageState extends State<HomePage> {
     try {
       final fetchedProducts = await _productService.fetchProducts();
       setState(() {
-        products = List<Product>.from(fetchedProducts); // ✅ forma segura de converter
+        products = List<Product>.from(fetchedProducts);
         loading = false;
       });
-
     } catch (e) {
       print('Erro: $e');
       setState(() => loading = false);
@@ -55,13 +42,15 @@ class _HomePageState extends State<HomePage> {
           : SingleChildScrollView(
         child: Column(
           children: [
-            // Banner
             Image.asset('assets/images/app_logo_splash.png'),
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Popular Packs', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                child: Text(
+                  'Popular Packs',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             SizedBox(
@@ -84,18 +73,33 @@ class _HomePageState extends State<HomePage> {
                             height: 120,
                             width: 160,
                             fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) => const SizedBox(
+                              height: 120,
+                              width: 160,
+                              child: Center(child: Icon(Icons.broken_image, size: 40)),
+                            ),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(product.name, style: const TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text(
+                              product.name,
+                              style: const TextStyle(fontWeight: FontWeight.bold),
+                            ),
                           ),
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                            child: Text(product.description, maxLines: 2, overflow: TextOverflow.ellipsis),
+                            child: Text(
+                              product.description,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text('\$${product.price}', style: const TextStyle(color: Colors.green)),
+                            child: Text(
+                              '\$${product.price}',
+                              style: const TextStyle(color: Colors.green),
+                            ),
                           ),
                         ],
                       ),
