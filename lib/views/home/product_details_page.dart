@@ -6,9 +6,13 @@ import '../../core/components/price_and_quantity.dart';
 import '../../core/components/product_images_slider.dart';
 import '../../core/components/review_row_button.dart';
 import '../../core/constants/app_defaults.dart';
+import '../../core/models/dummy_product_model.dart';
+import '../../features/products/data/models/product_model.dart' as feature_product;
 
 class ProductDetailsPage extends StatelessWidget {
-  const ProductDetailsPage({super.key});
+  final feature_product.ProductModel product;
+
+  const ProductDetailsPage({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -16,27 +20,25 @@ class ProductDetailsPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         leading: const AppBackButton(),
-        title: const Text('Product Details'),
+        title: Text(product.name),
       ),
       bottomNavigationBar: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppDefaults.padding),
           child: BuyNowRow(
-            onBuyButtonTap: () {},
-            onCartButtonTap: () {},
+            onBuyButtonTap: () {
+              // Ação para comprar
+            },
+            onCartButtonTap: () {
+              // Ação para adicionar ao carrinho
+            },
           ),
         ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const ProductImagesSlider(
-              images: [
-                'https://i.imgur.com/3o6ons9.png',
-                'https://i.imgur.com/3o6ons9.png',
-                'https://i.imgur.com/3o6ons9.png',
-              ],
-            ),
+            ProductImagesSlider(images: [product.imageUrl]),
             SizedBox(
               width: double.infinity,
               child: Padding(
@@ -45,23 +47,23 @@ class ProductDetailsPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Cauliflower Bangladeshi',
+                      product.name,
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                            fontWeight: FontWeight.bold,
-                          ),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     const SizedBox(height: 8),
-                    const Text('Weight: 5Kg'),
+                    Text('Weight:não disponível'),
                   ],
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: AppDefaults.padding),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: AppDefaults.padding),
               child: PriceAndQuantityRow(
-                currentPrice: 20,
-                orginalPrice: 30,
-                quantity: 2,
+                currentPrice: product.price,
+                orginalPrice: product.price,
+                quantity: 1, // pode ajustar a quantidade dinâmica se quiser
               ),
             ),
             const SizedBox(height: 8),
@@ -75,13 +77,14 @@ class ProductDetailsPage extends StatelessWidget {
                   Text(
                     'Product Details',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
                   ),
                   const SizedBox(height: 8),
+                  // Aqui você pode colocar uma descrição real, ou deixar estática
                   const Text(
-                    'Duis aute veniam veniam qui aliquip irure duis sint magna occaecat dolore nisi culpa do. Est nisi incididunt aliquip  commodo aliqua tempor.',
+                    'Duis aute veniam veniam qui aliquip irure duis sint magna occaecat dolore nisi culpa do. Est nisi incididunt aliquip commodo aliqua tempor.',
                   ),
                 ],
               ),
@@ -89,10 +92,7 @@ class ProductDetailsPage extends StatelessWidget {
 
             /// Review Row
             const Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: AppDefaults.padding,
-                // vertical: AppDefaults.padding,
-              ),
+              padding: EdgeInsets.symmetric(horizontal: AppDefaults.padding),
               child: Column(
                 children: [
                   Divider(thickness: 0.1),

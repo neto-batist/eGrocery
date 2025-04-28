@@ -8,7 +8,7 @@ import '../../data/datasources/product_remote_datasource_impl.dart';
 
 // Provider para o Dio
 final dioProvider = Provider<Dio>((ref) => Dio(BaseOptions(
-  baseUrl: 'http://10.0.2.2:8080/api',
+  baseUrl: 'http://192.168.18.151:8080/api', // <-- aqui atualizado!
 )));
 
 // Provider para o ProductRepository
@@ -18,11 +18,10 @@ final productRepositoryProvider = Provider<ProductRepositoryImpl>((ref) {
   return ProductRepositoryImpl(datasource);
 });
 
-// ID fixo da categoria (por exemplo: 3)
-const fixedCategoryId = 1;
-
-// Provider para o ProductViewModel com categoryId fixo
-final productProvider = StateNotifierProvider<ProductViewModel, AsyncValue<List<Product>>>((ref) {
-  final repository = ref.watch(productRepositoryProvider);
-  return ProductViewModel(repository, fixedCategoryId);
-});
+// Provider para o ProductViewModel (agora usa categoryId dinâmico)
+final productProvider = StateNotifierProvider.family<ProductViewModel, AsyncValue<List<Product>>, int>(
+      (ref, categoryId) {
+    final repository = ref.watch(productRepositoryProvider);
+    return ProductViewModel(repository, categoryId);
+  },
+);
