@@ -1,0 +1,2 @@
+C:/Users/Pedro/Desktop/eGrocery/android/app/.cxx/RelWithDebInfo/413o4u3z/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/Pedro/Desktop/eGrocery/android/app/.cxx/RelWithDebInfo/413o4u3z/armeabi-v7a/CMakeFiles/rebuild_cache.dir

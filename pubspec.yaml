@@ -44,13 +44,11 @@ dependencies:
   get_it: ^7.6.4
   json_annotation: ^4.8.1
   provider: ^6.1.1
-  firebase_core: ^2.24.0
-  firebase_auth: ^4.17.0
-  google_sign_in: ^6.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  mocktail: ^1.0.3  # ou a versão mais recente estável
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

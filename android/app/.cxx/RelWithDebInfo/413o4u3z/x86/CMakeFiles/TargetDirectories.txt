@@ -1,0 +1,2 @@
+C:/Users/Pedro/Desktop/eGrocery/android/app/.cxx/RelWithDebInfo/413o4u3z/x86/CMakeFiles/edit_cache.dir
+C:/Users/Pedro/Desktop/eGrocery/android/app/.cxx/RelWithDebInfo/413o4u3z/x86/CMakeFiles/rebuild_cache.dir
