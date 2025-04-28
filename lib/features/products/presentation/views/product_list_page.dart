@@ -3,11 +3,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/product_provider.dart';
 
 class ProductListPage extends ConsumerWidget {
-  const ProductListPage({Key? key}) : super(key: key);
+
+  final int categoryId;
+
+  const ProductListPage({Key? key, required this.categoryId}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final productState = ref.watch(productProvider);
+    final productState = ref.watch(productProvider(categoryId));
 
     return Scaffold(
       appBar: AppBar(title: const Text('Produtos')),

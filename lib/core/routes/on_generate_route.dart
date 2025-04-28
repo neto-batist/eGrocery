@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
+import '../../features/products/data/models/product_model.dart';
 import '../../views/auth/forget_password_page.dart';
 import '../../views/auth/intro_login_page.dart';
 import '../../views/auth/login_or_signup_page.dart';
@@ -49,6 +50,9 @@ import '../../views/save/save_page.dart';
 import 'app_routes.dart';
 import 'unknown_page.dart';
 
+import 'package:grocery/features/products/data/models/product_model.dart' as feature_product;
+import 'package:grocery/core/models/dummy_product_model.dart' as core_product;
+
 class RouteGenerator {
   static Route? onGenerate(RouteSettings settings) {
     final route = settings.name;
@@ -78,8 +82,11 @@ class RouteGenerator {
       case AppRoutes.checkoutPage:
         return CupertinoPageRoute(builder: (_) => const CheckoutPage());
 
-      case AppRoutes.categoryDetails:
-        return CupertinoPageRoute(builder: (_) => const CategoryProductPage());
+        case AppRoutes.categoryDetails:
+          final categoryId = settings.arguments as int?;
+          return CupertinoPageRoute(
+            builder: (_) => CategoryProductPage(categoryId: categoryId),
+          );
 
       case AppRoutes.login:
         return CupertinoPageRoute(builder: (_) => const LoginPage());
@@ -114,7 +121,10 @@ class RouteGenerator {
         return CupertinoPageRoute(builder: (_) => const BundleDetailsPage());
 
       case AppRoutes.productDetails:
-        return CupertinoPageRoute(builder: (_) => const ProductDetailsPage());
+        final product = settings.arguments as feature_product.ProductModel;
+        return CupertinoPageRoute(
+          builder: (_) => ProductDetailsPage(product: product),
+        );
 
       case AppRoutes.createMyPack:
         return CupertinoPageRoute(builder: (_) => const BundleCreatePage());

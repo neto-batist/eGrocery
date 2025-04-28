@@ -6,13 +6,16 @@ class ProductService {
 
   ProductService({Dio? dioClient}) : dioClient = dioClient ?? Dio();
 
-  Future<List<ProductModel>> fetchProducts() async {
+  Future<List<ProductModel>> fetchProducts({int? categoryId}) async {
     try {
-      final response = await dioClient.get('http://10.0.2.2:8080/api/products');
+      final response = await dioClient.get(
+        'http://192.168.18.151:8080/api/products',
+        queryParameters: {
+          if (categoryId != null) 'categoryId': categoryId,
+        },
+      );
 
       final List<dynamic> content = response.data['content'];
-
-      // Faz o parse corretamente
       return content.map((json) => ProductModel.fromJson(json)).toList();
     } catch (e) {
       throw Exception('Erro ao buscar produtos: $e');
