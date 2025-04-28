@@ -1,4 +1,5 @@
 class ProductModel {
+  int id;
   String name;
   String weight;
   String cover;
@@ -6,6 +7,7 @@ class ProductModel {
   double price;
   double mainPrice;
   ProductModel({
+    required this.id,
     required this.name,
     required this.weight,
     required this.cover,

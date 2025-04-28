@@ -5,4 +5,5 @@ import '../models/product_model.dart';
 abstract class ProductRemoteDatasource {
   Future<List<ProductModel>> getProducts();
   Future<List<Product>> fetchProducts();
+  Future<List<Product>> fetchProductsByCategory(int categoryId);
 }
