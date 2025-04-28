@@ -5,6 +5,7 @@ class Dummy {
   /// List Of Dummy Products
   static List<ProductModel> products = [
     ProductModel(
+      id: 100,
       name: 'Perry\'s Ice Cream Banana',
       weight: '800 gm',
       cover: 'https://i.imgur.com/6unJlSL.png',
@@ -13,6 +14,7 @@ class Dummy {
       mainPrice: 15,
     ),
     ProductModel(
+      id: 101,
       name: 'Vanilla Ice Cream Banana',
       weight: '500 gm',
       cover: 'https://i.imgur.com/oaCY49b.png',
@@ -21,6 +23,7 @@ class Dummy {
       mainPrice: 15,
     ),
     ProductModel(
+      id:102,
       name: 'Meat',
       weight: '1 Kg',
       cover: 'https://i.imgur.com/5wghZji.png',

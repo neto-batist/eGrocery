@@ -5,7 +5,7 @@ class DioClient {
 
   DioClient(this._dio) {
     _dio.options = BaseOptions(
-      baseUrl: 'http://10.0.2.2:8080/api', // Ajuste conforme necessário
+      baseUrl: 'http://192.168.18.151:8080/api', // Ajuste conforme necessário
       connectTimeout: const Duration(seconds: 10),
       receiveTimeout: const Duration(seconds: 10),
       headers: {
